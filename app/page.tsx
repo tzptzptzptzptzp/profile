@@ -2,7 +2,7 @@ import { Balloon } from "@/components/Balloon";
 import { Frame } from "@/components/Frame";
 import Image from "next/image";
 
-const IMG_URL = "https://bsj-api.vercel.app/api/bsj/default?size=250";
+const IMG_URL = "/bisyojo_chan.png";
 const IMG_SIZE = 360;
 
 const mock = [
@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <main className="flex items-center justify-center w-dvw h-dvh">
       <Frame>
-        <div className="w-full bg-main h-screen flex flex-col">
-          <div className="flex-1 flex flex-col-reverse gap-6 overflow-y-scroll px-6 py-4">
+        <div className="flex flex-col relative w-full h-screen bg-main">
+          <div className="flex flex-col-reverse gap-6 overflow-y-scroll px-6 pt-4 pb-[100dvw] md:pb-100 hide-scrollbar">
             {mock.map((text, index) => (
               <div
                 className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
@@ -42,11 +42,11 @@ export default function Home() {
           </div>
 
           <Image
-            className="relative bottom-0 w-full h-auto"
+            className="absolute right-0 bottom-0 left-0 w-full h-auto pointer-events-none"
             src={IMG_URL}
             width={IMG_SIZE}
             height={IMG_SIZE}
-            alt=""
+            alt="美少女ちゃん"
           />
         </div>
       </Frame>
