@@ -34,7 +34,7 @@ export const DialogueArea = () => {
   }, []);
 
   return (
-    <div className="flex flex-col-reverse gap-6 overflow-y-scroll px-6 pt-4 pb-[100dvw] md:pb-100 hide-scrollbar">
+    <div className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-4 pb-[100dvw] md:pb-100 hide-scrollbar">
       {mock.slice(0, visibleCount).map((text, index) => (
         <div
           className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
