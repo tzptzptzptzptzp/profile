@@ -37,3 +37,35 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+
+/* Balloon appear animation */
+@keyframes balloon-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-balloon-appear {
+  opacity: 0;
+  animation: balloon-appear 0.5s ease-out forwards;
+}
+
+/* Character floating animation */
+@keyframes character-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-character-float {
+  animation: character-float 3s ease-in-out infinite;
+}

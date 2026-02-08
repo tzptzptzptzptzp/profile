@@ -10,7 +10,7 @@ const IMG_SIZE = 360;
 export const CharacterImage = () => {
   return (
     <Image
-      className="absolute right-0 bottom-0 left-0 w-full h-auto pointer-events-none"
+      className="absolute right-0 bottom-0 left-0 w-full h-auto pointer-events-none animate-character-float"
       src={IMG_URL}
       width={IMG_SIZE}
       height={IMG_SIZE}
