@@ -16,6 +16,8 @@ const mock = [
   '"You are amazing!You are amazing!You are amazing!"',
 ];
 
+const INTERVAL_DELAY = 250;
+
 export const DialogueArea = () => {
   const [visibleCount, setVisibleCount] = useState(0);
 
@@ -28,7 +30,7 @@ export const DialogueArea = () => {
         clearInterval(timer);
         return prev;
       });
-    }, 500);
+    }, INTERVAL_DELAY);
 
     return () => clearInterval(timer);
   }, []);
@@ -37,8 +39,11 @@ export const DialogueArea = () => {
     <div className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-4 pb-[100dvw] md:pb-100 hide-scrollbar">
       {mock.slice(0, visibleCount).map((text, index) => (
         <div
-          className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+          className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"} animate-balloon-appear`}
           key={index}
+          style={{
+            animationDelay: `${index * INTERVAL_DELAY}ms`,
+          }}
         >
           <Balloon
             arrowPosition={index % 2 === 0 ? "bottom-right" : "bottom-left"}
