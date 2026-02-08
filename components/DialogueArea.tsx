@@ -59,7 +59,7 @@ export const DialogueArea = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-6 pb-[100dvw] md:pb-100 hide-scrollbar"
+      className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-6 pb-[calc(100dvw+1rem)] md:pb-100 hide-scrollbar"
     >
       {PROFILE_JA.slice(0, visibleCount).map((text, index) => (
         <div
@@ -69,7 +69,7 @@ export const DialogueArea = () => {
         >
           <Balloon
             arrowPosition={index % 2 === 0 ? "bottom-right" : "bottom-left"} // 偶数は左寄せ+右下矢印、奇数は右寄せ+左下矢印
-            className="max-w-11/12 u-shadow-balloon"
+            className="max-w-11/12 font-semibold u-shadow-balloon"
           >
             {text}
           </Balloon>
