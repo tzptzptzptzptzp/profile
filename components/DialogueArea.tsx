@@ -2,27 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Balloon } from "./Balloon";
-
-// キャラクターのセリフデータ
-const mock = [
-  '"Hello, world!"',
-  '"This is a sample profile page."',
-  '"Feel free to explore more!"',
-  '"Have a great day!"',
-  '"Stay safe and healthy!"',
-  '"Keep learning and growing!"',
-  '"Enjoy every moment!"',
-  '"Believe in yourself!"',
-  '"Keep pushing forward!"',
-  '"You are amazing!You are amazing!You are amazing!"',
-  '"Have a great day!"',
-  '"Stay safe and healthy!"',
-  '"Keep learning and growing!"',
-  '"Enjoy every moment!"',
-  '"Believe in yourself!"',
-  '"Keep pushing forward!"',
-  '"You are amazing!You are amazing!You are amazing!"',
-];
+import { PROFILE_JA } from "@/constants/profile";
 
 // 吹き出し表示間隔（750ms）
 const INTERVAL_DELAY = 750;
@@ -42,7 +22,7 @@ export const DialogueArea = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setVisibleCount((prev) => {
-        if (prev < mock.length) {
+        if (prev < PROFILE_JA.length) {
           return prev + 1;
         }
         clearInterval(timer);
@@ -81,7 +61,7 @@ export const DialogueArea = () => {
       ref={containerRef}
       className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-6 pb-[100dvw] md:pb-100 hide-scrollbar"
     >
-      {mock.slice(0, visibleCount).map((text, index) => (
+      {PROFILE_JA.slice(0, visibleCount).map((text, index) => (
         <div
           ref={index === visibleCount - 1 ? lastBalloonRef : null} // 最新の吹き出しに参照を設定
           className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"} animate-balloon-appear`}
