@@ -68,7 +68,7 @@ export const DialogueArea = () => {
     <div
       key={language} // 言語変更時にコンポーネントをリマウントしてstateをリセット
       ref={containerRef}
-      className="flex flex-col-reverse gap-6 overflow-y-scroll min-h-full px-6 pt-6 pb-[calc(100dvw+1rem)] md:pb-100 hide-scrollbar"
+      className="flex flex-col-reverse gap-6 overflow-y-scroll h-dvh px-6 pt-6 pb-[calc(100dvw+1rem)] md:pb-100 hide-scrollbar"
     >
       {currentProfile.slice(0, visibleCount).map((text, index) => (
         <div

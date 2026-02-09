@@ -10,7 +10,7 @@ export default function Home() {
         <LanguageToggle />
       </div>
       <Frame>
-        <div className="flex flex-col relative w-full h-screen bg-main">
+        <div className="flex flex-col relative w-full h-dvh bg-main">
           <DialogueArea />
           <CharacterImage />
         </div>
