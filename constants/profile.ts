@@ -46,7 +46,9 @@ export const PROFILE_JA = [
   "この子の名前は美少女ちゃん🎀！",
   "エンジニアをしています🕹️！",
   "栃木県出身🍓🥟！埼玉県在住🍘！",
-  "ループしません🌀！",
+  "ループするの?!って思いました🤨？",
+  "......安心してください👾",
+  "......ループしません🌀！",
   "幸せになってくださいね🌠",
 ];
 
@@ -87,6 +89,8 @@ export const PROFILE_EN = [
   "This girl's name is Bishoujo-chan🎀!",
   "I am an engineer🕹️!",
   "From Tochigi Prefecture🍓🥟! Living in Saitama Prefecture🍘!",
-  "Won't loop🌀!",
+  "You thought it would loop?!🤨?",
+  "......Don't worry👾",
+  "......It won't loop🌀!",
   "Please be happy🌠",
 ];
