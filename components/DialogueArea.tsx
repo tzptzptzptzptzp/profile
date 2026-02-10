@@ -79,7 +79,7 @@ export const DialogueArea = () => {
           >
             <Balloon
               arrowPosition={index % 2 === 0 ? "bottom-right" : "bottom-left"} // 偶数は左寄せ+右下矢印、奇数は右寄せ+左下矢印
-              className="max-w-11/12 font-semibold u-shadow-balloon"
+              className="max-w-11/12 font-semibold u-filter-balloon"
             >
               {text}
             </Balloon>

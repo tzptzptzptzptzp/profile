@@ -14,7 +14,7 @@ export const LanguageToggle = () => {
       onClick={toggleLanguage}
       className={cn(
         "relative w-15 h-8 rounded-full",
-        "bg-white hover:bg-gray-200 opacity-100 md:opacity-75 hover:opacity-100 transition-all duration-200",
+        "bg-white dark:bg-background hover:bg-gray-200 dark:hover:bg-[#333] opacity-100 md:opacity-75 hover:opacity-100 transition-all duration-200",
       )}
     >
       <div

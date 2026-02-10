@@ -14,7 +14,7 @@ export const Balloon: React.FC<BalloonProps> = ({
   className = "",
 }) => {
   const getArrowClasses = () => {
-    const baseArrow = "absolute -bottom-2.5 fill-white dark:fill-zinc-700";
+    const baseArrow = "absolute -bottom-2.5 fill-white dark:fill-[#333]";
 
     switch (arrowPosition) {
       case "bottom-left":
@@ -37,7 +37,7 @@ export const Balloon: React.FC<BalloonProps> = ({
   return (
     <div
       className={cn(
-        "relative w-fit px-4 py-1 rounded-2xl bg-white dark:bg-zinc-700 text-foreground",
+        "relative w-fit px-4 py-1 rounded-2xl bg-white dark:bg-[#333] text-foreground",
         className,
       )}
     >
