@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --main: #eb5559;
+  --background: #eb5559;
   --foreground: #171717;
 }
 
 @theme inline {
+  --color-main: var(--main);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #252525;
+    --foreground: #bbb;
   }
 }
 
@@ -23,4 +25,61 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+.hide-scrollbar {
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.u-filter-character {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
+}
+
+@media (prefers-color-scheme: dark) {
+  .u-filter-character {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8)) brightness(0.8);
+  }
+}
+
+.u-filter-balloon {
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Balloon appear animation */
+@keyframes balloon-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-balloon-appear {
+  opacity: 0;
+  animation: balloon-appear 0.5s ease-out forwards;
+}
+
+/* Character floating animation */
+@keyframes character-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-character-float {
+  animation: character-float 3s ease-in-out infinite;
 }
