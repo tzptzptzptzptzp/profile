@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const IMG_URL = "/bisyojo_chan.png";
+const IMG_URL = "./bisyojo_chan.png";
 const IMG_SIZE = 360;
 
 /**
