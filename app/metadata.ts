@@ -13,7 +13,7 @@ const SHORT_DESCRIPTION =
   "エンジニアてづっぴのプロフィールページです。TypeScript、Next.js、フロントエンド開発が得意です。";
 
 // 画像設定の定数
-const OGP_IMAGE_PATH = "./OGP.png";
+const OGP_IMAGE_PATH = `${SITE_URL}OGP.png`;
 const OGP_IMAGE_ALT = "てづっぴのプロフィール - エンジニア・クリエイター";
 const FAVICON_64_PATH = "./favicon_64.ico";
 const FAVICON_256_PATH = "./favicon_256.ico";
